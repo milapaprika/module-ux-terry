@@ -22,17 +22,17 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 ### Setup Card Layout
 
-1. Currently, the cards are displayed vertically. Locate the styles.css file and modify the declarations for `.charContainer` so that the cards are organized in 5 columns of width 280 pixels using CSS grid.
+✅1. Currently, the cards are displayed vertically. Locate the styles.css file and modify the declarations for `.charContainer` so that the cards are organized in 5 columns of width 280 pixels using CSS grid. 
 
-2. Can we achieve this same effect using Flex display?
+✅2. Can we achieve this same effect using Flex display? 
 
-3. Going back to using the grid layout. Instead of 280px, we want the width of the card to be responsive instead. **Hint:** lookup what fractional units are and how to use them.
+✅3. Going back to using the grid layout. Instead of 280px, we want the width of the card to be responsive instead. **Hint:** lookup what fractional units are and how to use them.
 
-4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns, but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
+✅4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns, but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
 
 ### Setup Individual Card Layout
 
-1. Now let's move on to the layout for an individual card. Notice that stats of the character are aligned to the left border of the card container. What if we want to center the stats? **Hint:** use flexbox
+✅1. Now let's move on to the layout for an individual card. Notice that stats of the character are aligned to the left border of the card container. What if we want to center the stats? **Hint:** use flexbox
 
     After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from Chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margins overlapping or adjacent to each other?
 
@@ -40,9 +40,9 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
     [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
-2. And now that we are working on the styling for the cards, let's change the font a bit as well. We will use Cabin for the stats and Oswald for the header. Google Fonts is a popular site for importing fonts. Let's go ahead and import Cabin and Oswald into our stylesheet.
+✅2. And now that we are working on the styling for the cards, let's change the font a bit as well. We will use Cabin for the stats and Oswald for the header. Google Fonts is a popular site for importing fonts. Let's go ahead and import Cabin and Oswald into our stylesheet.
 
-3. The first thing that we are going to look at is the header of the cards. Notice that there's a horizontal white space between the character name and the star in the header. First, inspect the header using Chrome dev tool to see if you can figure out which part of the style.css specifies the white space.
+✅3. The first thing that we are going to look at is the header of the cards. Notice that there's a horizontal white space between the character name and the star in the header. First, inspect the header using Chrome dev tool to see if you can figure out which part of the style.css specifies the white space.
 
     You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeadContainer`. If we remove that declaration, what would you have to add to the `.charHeadContainer` in style.css so that the header and the star is apart from one other?
 
