@@ -46,25 +46,25 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
     You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeadContainer`. If we remove that declaration, what would you have to add to the `.charHeadContainer` in style.css so that the header and the star is apart from one other?
 
-4. Let's explore positioning further by increasing the height of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
+✅34. Let's explore positioning further by increasing the height of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
 
     If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
 
-5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
+✅5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
 
 ### Incorporate Sass
 Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. The Sass compiler is already installed, so all you need to do is
 
-1. Change the style.css file to style.scss.         
+✅1. Change the style.css file to style.scss.         
 
-2. Do the same for the import statement in your App.tsx.
+✅2. Do the same for the import statement in your App.tsx.
 
-3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
+✅3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
 
 ### Refactor with Sass Nesting
 Now let's move on to different Sass features that you can use with different web design principles + CSS declarations that will be useful for not only your projects here at Codesmith but also during your job search and career as well.
 
-1. So one of the quick benefits of Sass that we can go over now is nesting. Remember how we specify specific CSS style for an element that's inside a class:
+✅1. So one of the quick benefits of Sass that we can go over now is nesting. Remember how we specify specific CSS style for an element that's inside a class:
 
     ```scss
     .charHeadContainer{}
@@ -72,20 +72,24 @@ Now let's move on to different Sass features that you can use with different web
     .charHeadContainer h2{}
     ```
 
-2. While this is fine, doing nesting with Sass will be more readable. Look up how to do nesting with Sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
+
+✅2. While this is fine, doing nesting with Sass will be more readable. Look up how to do nesting with Sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
+SASS Nesting:
+https://www.w3schools.com/sass/sass_nesting.asp
 
 Nesting is not a must and it does not always improve readability. You can imagine if you have for example 10 level of nestedness, using this syntax might actually make it less readable. So use your judgment in this case.
 
-### Font Colors
+
+=### Font Colors
 Another thing that we are going to do is pick colors. When you think about sites like Google. Youtube, or Google Doc, you might think it's mostly white background and black font, and there's only one black and one white. But if you look closely, you'd see that they are different shades of black for different texts. For example, take a look at the post on Codesmith Facebook page:
 
 ![cs-fb-post](./docs/assets/images/codesmith-facebook.png)
 
 The body of texts, the timestamp, like and share buttons, they all have different colors. 
 
-1. Use Chrome Dev Tool and inspect a post on Codesmith's Facebook [page](https://facebook.com/codesmithhq) and see if they are really complete black.
+✅1. Use Chrome Dev Tool and inspect a post on Codesmith's Facebook [page](https://facebook.com/codesmithhq) and see if they are really complete black.
 
-2. If they aren't completely black, go ahead and change them to black. 
+✅2. If they aren't completely black, go ahead and change them to black. 
 
 How does it look now compared to before? By removing the hierarchy of color, while not impossible, it might feel a little bit harder to navigate all these information on the page. And this is what these visual hierarchy is for, to subtly guide users' eye gaze in their user journey. In our codesmith post example, the content of the post is the most important and we want that content to jump out to the user. Therefore, we want the content to be the "blackest" against a white background, while the less important information (i.e. date) can be "less black" so it's not distracting users from the more important information.
 
@@ -101,100 +105,107 @@ Here's what the final result should look like.
 
 To get this color scheme, you'll need four colors.
 
-1. **Primary "black":** this can be absolute black, but a lot of websites often don't use absolute black to achieve a gentler look. This is often used for the most important info like headers
-2. **Secondary "black":** this will be lighter than the absolute black. The font that uses this color is also for important info but you don't want to distract users from the primary black. In this case it's the stats.
-3. **Light grey:** this can be used for borders, such as div border or break lines. Google.com uses this a lot if you want to check it out. We will be using this for border
-4. **And super light grey:** this super light grey will be much lighter than the light grey above. We are using a super light grey as the background color to demarcate the cards. The user will be subconsciously drawn to the white card itself without being distracted by the contrast, therefore focusing on the primary and secondary black front that you carefully laid out before.
+✅1. **Primary "black":** this can be absolute black, but a lot of websites often don't use absolute black to achieve a gentler look. This is often used for the most important info like headers
+✅2. **Secondary "black":** this will be lighter than the absolute black. The font that uses this color is also for important info but you don't want to distract users from the primary black. In this case it's the stats.
+✅23. **Light grey:** this can be used for borders, such as div border or break lines. Google.com uses this a lot if you want to check it out. We will be using this for border
+✅24. **And super light grey:** this super light grey will be much lighter than the light grey above. We are using a super light grey as the background color to demarcate the cards. The user will be subconsciously drawn to the white card itself without being distracted by the contrast, therefore focusing on the primary and secondary black front that you carefully laid out before.
 
 ### Shadows
 Now we've added the colors but there's still something missing to make the cards more prominent: shadows. For adding shadow, you'd use the CSS declaration box-shadow. You can find the syntax [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow). Let's go ahead and add some shadow for the box.
 
 When adding box shadow, there are several things to consider:
 
-1. `offset-y`: to simulate light coming from above as seen in nature
+Box-shadow: 0, offset-y;
+✅1. `offset-y`: to simulate light coming from above as seen in nature
 
-2. `blur-radius`: shadows in real world have soft edges
+✅2. `blur-radius`: shadows in real world have soft edges
 
-3. `spread-radius`: the wider the spread, the more elevated the element is from the background
+✅3. `spread-radius`: the wider the spread, the more elevated the element is from the background
 
-4. `color`: shadow should not be that much darker than the background. Shadows that are too dark risk standing out and distracting users. rgba(0,0,0,0.1) can often be an appropriate color for shadow (do you know what the fourth parameter for rgba is?)
+✅4. `color`: shadow should not be that much darker than the background. Shadows that are too dark risk standing out and distracting users. rgba(0,0,0,0.1) can often be an appropriate color for shadow (do you know what the fourth parameter for rgba is?)
 
-The trick here is that the shadow should be subtle, meaning the edge should be soft and the color of the shadow should just be a little bit darker than the background color to avoid stark contrast.
+✅The trick here is that the shadow should be subtle, meaning the edge should be soft and the color of the shadow should just be a little bit darker than the background color to avoid stark contrast.
 
 To read more on why lighting and shadow are important and how to do them properly, here's the material design doc link on lights and shadow from the material design doc: [https://material.io/design/environment/light-shadows.html](https://material.io/design/environment/light-shadows.html).
 
 
 ### More Color!
-Besides picking different shades of black, you can also pick a primary _color_ to not only provide a theme and identity of your application, but also to guide your user's visual attention (e.g. blue is the primary color for Facebook). This primary color can be used to highlight additional titles, navbar items and buttons.
+✅Besides picking different shades of black, you can also pick a primary _color_ to not only provide a theme and identity of your application, but also to guide your user's visual attention (e.g. blue is the primary color for Facebook). This primary color can be used to highlight additional titles, navbar items and buttons.
 
-Similar to different shades of "black" that we discussed earlier, you can have different shades of your primary color to guide your user's visual attention. When applying this to buttons, for example, you might want to use your primary blue as solid background color for important buttons, such as "submit", but use your lighter, secondary blue for a less important button, "cancel".
+✅Similar to different shades of "black" that we discussed earlier, you can have different shades of your primary color to guide your user's visual attention. When applying this to buttons, for example, you might want to use your primary blue as solid background color for important buttons, such as "submit", but use your lighter, secondary blue for a less important button, "cancel".
 
-1. Now that you are familiar with primary colors, let's pick the blue that [Google Doc](https://www.google.com/docs/about/) uses and use that for the card's buttons. Try to match the style to the picture below **Hint:** the width and height of the buttons are not specified, but the padding of the buttons is.
+✅1. Now that you are familiar with primary colors, let's pick the blue that [Google Doc](https://www.google.com/docs/about/) uses and use that for the card's buttons. Try to match the style to the picture below **Hint:** the width and height of the buttons are not specified, but the padding of the buttons is.
 
 ![button-color-mockup](./docs/assets/images/button-color-mockup.png)
 
-2. As you are adding border-radius for the button (Hint Hint), you would also want to change the border radius of your card too. Having different border radius signals different styles within your application to your user and can be visually disorienting. This is true for border thickness as well.
+✅2. As you are adding border-radius for the button (Hint Hint), you would also want to change the border radius of your card too. Having different border radius signals different styles within your application to your user and can be visually disorienting. This is true for border thickness as well.
 
-3. In our example above, for the "Customize Character" button, we decided to make it a secondary button, so that the user's more likely to click on "Get More Info" instead. To make the secondary button, we turn the font blue against a white background while using a lighter primary blue for the border. When juxtaposed with the button with the blue background, the "Customize Character" button is less conspicuous. Below are more examples of creating visual hierarchy for buttons:
+✅3. In our example above, for the "Customize Character" button, we decided to make it a secondary button, so that the user's more likely to click on "Get More Info" instead. To make the secondary button, we turn the font blue against a white background while using a lighter primary blue for the border. When juxtaposed with the button with the blue background, the "Customize Character" button is less conspicuous. Below are more examples of creating visual hierarchy for buttons:
 
 ![visual-hierarchy-examples](./docs/assets/images/visual-hierarchy-examples.png)
 
-4. We can make the blue even more cohesive by adding a much lighter blue from primary blue to the card's border.
+✅4. We can make the blue even more cohesive by adding a much lighter blue from primary blue to the card's border.
 
 ![button-border-mockup](./docs/assets/images/button-border-mockup.png)
 
 ### Fluid Font Scaling
 Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
 
-Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
+✅Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
 
-1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
+✅A1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
 
-2. Resize the window, and notice that the text size scales responsively.
+✅A2. Resize the window, and notice that the text size scales responsively.
 
-3. Notice, however, that the buttons' font size doesn't change. This is because buttons come with default styling, which includes absolute font-size units.
+✅3. Notice, however, that the buttons' font size doesn't change. This is because buttons come with default styling, which includes absolute font-size units.
 
-4. Write a CSS rule targeting buttons that sets their `font-size` equal to 75% of the document's root font size. **Hint:** Look into what relative units CSS provides other than viewport-based units.
+REM refers to the font-size of the root element (0.75 rem)
+Also, right now the font shrinks too much when the window is resized
+✅4. Write a CSS rule targeting buttons that sets their `font-size` equal to 75% of the document's root font size. **Hint:** Look into what relative units CSS provides other than viewport-based units.
 
 ### Media Queries
 Notice though, as the window shrinks further and further, the text starts to get uncomfortably small. This is where @media queries can come in handy. While media queries can be used in a variety of contexts, they are very often used to ensure that different CSS rulesets will apply depending on the current size of the client's screen. 
 
-1. Play around with resizing the screen in your browser's dev tools, and figure out what the breakpoint is where the font resizing makes it difficult to read. Chrome and other browsers have handy built-in developer tools to visualize and measure various screen sizes.
+✅1. Play around with resizing the screen in your browser's dev tools, and figure out what the breakpoint is where the font resizing makes it difficult to read. Chrome and other browsers have handy built-in developer tools to visualize and measure various screen sizes.
 
-2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way. For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+✅2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way. For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
-3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
+
+✅3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
 
 ![mobile-card-view](./docs/assets/images/mobile-card-view.png)
 
-### Implementing Sass Variables
+✅3### Implementing Sass Variables
 As your application grows more complex, you would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy is going to take a lot of time.
 
 To combat this, the first thing we can do is to use SCSS variables. Please take a few minutes to look up how to use variables in SCSS.
 
-1. Let's declare an SCSS variable called `primary-color` and assign the blue that we have been using for primary blue to it. Now replace the RGB value for the primary blue in CSS declarations with the variable name primary-color instead
+✅1. Let's declare an SCSS variable called `primary-color` and assign the blue that we have been using for primary blue to it. Now replace the RGB value for the primary blue in CSS declarations with the variable name primary-color instead
 
-2. Now do the same thing for lighter primary blue: declare a variable called `light-primary-color` and assign the lighter blue for the border of the button to that variable. Replace the RGB value with the new variable name similar to the step above.
+✅2. Now do the same thing for lighter primary blue: declare a variable called `light-primary-color` and assign the lighter blue for the border of the button to that variable. Replace the RGB value with the new variable name similar to the step above.
 
-3. But now we run into the same problem, if we change the `primary-color` value, we would have to change the `light-primary-color` value again as well. Is there a way to make `light-primary-color` dependent on `primary-color` so that `light-primary-color` would automatically change when we change primary color? Can you do the same for the border color of the card as well?
+✅3. But now we run into the same problem, if we change the `primary-color` value, we would have to change the `light-primary-color` value again as well. Is there a way to make `light-primary-color` dependent on `primary-color` so that `light-primary-color` would automatically change when we change primary color? Can you do the same for the border color of the card as well?
 
-4. (optional) do the same but for different shades of black
+✅4. (optional) do the same but for different shades of black
 
-### The Sass @import Rule
+✅### The Sass @import Rule
 As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. Sass's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
 
-**Note:** The `@import` rule is being phased out in favor of the newer `@use` rule, but for this curriculum we'll stick with `@import` for simplicity.
+✅**Note:** The `@import` rule is being phased out in favor of the newer `@use` rule, but for this curriculum we'll stick with `@import` for simplicity.
 
-Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
+✅Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
 
-First, create a new SCSS file in the `stylesheets` folder to contain your Sass variable declarations, so that they can be accessed throughout the project. Sass files that are only meant to be imported are called ['partials'](https://sass-lang.com/documentation/at-rules/import#partials), and by convention their filenames start with an underscore. Therefore, call this file `_variables.scss` and move all of your color variables into this file.
+✅First, create a new SCSS file in the `stylesheets` folder to contain your Sass variable declarations, so that they can be accessed throughout the project. Sass files that are only meant to be imported are called ['partials'](https://sass-lang.com/documentation/at-rules/import#partials), and by convention their filenames start with an underscore. Therefore, call this file `_variables.scss` and move all of your color variables into this file.
 
-Then, in your `styles.scss` file, `@import` in the variables file. Note: when importing partials, you can leave off the underscore in the filename. Reload the page and verify all styling rules are still being applied.
+✅FThen, in your `styles.scss` file, `@import` in the variables file. Note: when importing partials, you can leave off the underscore in the filename. Reload the page and verify all styling rules are still being applied.
 
-Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](https://sass-lang.com/guide) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
+✅Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](https://sass-lang.com/guide) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
 
-After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
+✅After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
 
+
+------------------------------------------------------------------------------------------------------------->
+## Skip Extensions for now
 
 ## Extensions
 

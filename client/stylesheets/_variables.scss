@@ -1,0 +1,62 @@
+/* SCSS Variables example
+$primary-color: #007bff;
+$font-stack: Helvetica, sans-serif;
+$base-font-size: 16px;
+
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+  font-size: $base-font-size;
+}
+*/
+
+
+/* SCSS Variables: */
+$primary-color: rgb(157, 0, 255);
+$primary-black: rgb(0, 0, 0); 
+$box-shadow: rgba(0, 0, 0, 0.1);
+
+/* Black colors */
+
+// Extract RGB components using SCSS functions
+$black-red: red($primary-black);     // returns 0
+$black-green: green($primary-black); // returns 0
+$black-blue: blue($primary-black);   // returns 0
+
+
+$lighter-black: rgb(
+  calc(#{$black-red} + 80),
+  calc(#{$black-green} + 80),
+  calc(#{$black-blue} + 80)
+); 
+
+//230,220,220//
+$light-black: rgb(
+  calc(#{$black-red} + 250),
+  calc(#{$black-green} + 250),
+  calc(#{$black-blue} + 250)
+);
+
+
+/* modify with rgb values and calc function*/
+
+/* lighten using scss's lighten function */
+
+// Extract RGB components using SCSS functions
+$base-red: red($primary-color);     // returns 157
+$base-green: green($primary-color); // returns 0
+$base-blue: blue($primary-color);   // returns 255
+
+//$lighten-amount: 50;
+
+$light-primary-color: rgb(
+  calc(#{$base-red} + 70),
+  calc(#{$base-green} + 200),
+  calc(#{$base-blue} + 0)
+);
+
+$lighter-primary-color: rgb(
+  calc(#{$base-red} + 90),
+  calc(#{$base-green} + 220),
+  calc(#{$base-blue} + 0)
+);
